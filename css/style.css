@@ -1,0 +1,88 @@
+@font-face {
+    font-family: BodyFont;
+    src: url('../static/font/body-font-family/Body-Grotesque-Fit-Bold-trial.ttf');
+ }
+
+html, body {
+    width:100%;
+    height: 100%;
+}
+
+
+.flex-container{
+    background-color: red;
+    width: 100%;
+    height: 100%;
+}
+
+.nav-standard{
+    background-color: blue;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    position: absolute;
+
+}
+
+.nav-menu-section{
+    background-color: green;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-button{
+    height: fit-content;
+    background-color: transparent;
+    border: none;
+    font-family: "BodyFont";
+}
+
+.nav-logo{
+    background-color: yellow;
+    width: 20%;
+    height: 100%;
+}
+
+.standard-section{
+    width: 100%;
+    height: 100%;
+    background-color: violet;
+}
+
+.hero-section{
+    background-color: aqua;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.video-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.hero-movie{
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+.nav-logo-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+}
+.nav-logo-img{
+    height: 100%;
+}
+.nav-logo-img-a{
+    height: 70%;
+}
