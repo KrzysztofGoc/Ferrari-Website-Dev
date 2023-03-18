@@ -1,11 +1,8 @@
-@font-face {
-    font-family: BodyFont;
-    src: url('../static/font/body-font-family/Body-Grotesque-Fit-Bold-trial.ttf');
- }
-
 html, body {
     width:100%;
     height: 100%;
+    color: rgb(255, 255, 255);
+    font-family: 'Roboto', sans-serif;
 }
 
 
@@ -16,16 +13,17 @@ html, body {
 }
 
 .nav-standard{
-    background-color: blue;
     width: 100%;
     height: 90px;
     display: flex;
     position: absolute;
-
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0),
+                                              rgba(0, 0, 0, 0.4) 70%,
+                                              rgba(0, 0, 0, 0.8));
+    z-index: 1;
 }
 
 .nav-menu-section{
-    background-color: green;
     width: 40%;
     height: 100%;
     display: flex;
@@ -37,19 +35,24 @@ html, body {
     height: fit-content;
     background-color: transparent;
     border: none;
-    font-family: "BodyFont";
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 1px;
+    font-size: 12px;
+    line-height: 1.27em;
+    text-transform: uppercase;
 }
-
-.nav-logo{
-    background-color: yellow;
-    width: 20%;
-    height: 100%;
+.nav-button:hover{
+    cursor: pointer;
+    color: rgb(235, 235, 235);
+    transition: 0.3s;
 }
 
 .standard-section{
     width: 100%;
     height: 100%;
     background-color: violet;
+    position: relative;
 }
 
 .hero-section{
@@ -86,3 +89,93 @@ html, body {
 .nav-logo-img-a{
     height: 70%;
 }
+.hero-text-section{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+}
+.hero-text-section-bottom-section{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-text-section-flex-start-mixin{
+    align-items: flex-start;
+}
+.hero-text-section-main-span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    text-transform: uppercase;
+    font-size: 36px;
+    font-weight: bold;
+    font-stretch: normal;
+    letter-spacing: normal;
+}
+.hero-text-section-minor-span{
+    width: fit-content;
+    text-transform: capitalize;
+    font-size: 18px;
+
+}
+.hero-text-section-discover-a{
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.5s;
+    line-height: 3.5em;
+}
+.hero-text-section-discover-a:hover{
+    cursor: pointer;
+}
+.hero-text-section-discover-a:hover .material-symbols-outlined{
+    color: #ff0000;
+    left: 10px;
+}
+.material-symbols-outlined {
+    left: 2px;
+    position: relative;
+    transition-property: color, left;
+    transition-duration: 0.7s, 0.3s;
+    height: fit-content;
+    width: fit-content;
+    font-size: 32px !important;
+    padding-bottom: 1px;
+}
+
+.gradient-top-section{
+    background: linear-gradient(rgba(0, 0, 0, 0.5) 10%,
+                                rgba(0, 0, 0, 0) 30%);
+                                        
+}
+.white-gradient-bottom-section{
+    height: 22%;
+    background-image: linear-gradient(0deg, white 60%,
+                                            rgba(255, 255, 255, 0));
+}
+
+.gradient-bottom-section{
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0),
+                                                 rgba(0, 0, 0, 0.7));
+}
+
+.standard-section-cover-image{
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+}
+.standard-section-text-section-main-span{
+    color: #181818;
+}
+
