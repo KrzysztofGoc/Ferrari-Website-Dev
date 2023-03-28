@@ -1,7 +1,7 @@
 html, body {
     width:100%;
     height: 100%;
-    color: rgb(255, 255, 255);
+    color: white;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -38,7 +38,7 @@ html, body {
     font-weight: normal;
     font-stretch: normal;
     letter-spacing: 1px;
-    font-size: 12px;
+    font-size: 0.75rem;
     line-height: 1.27em;
     text-transform: uppercase;
 }
@@ -48,18 +48,13 @@ html, body {
     transition: 0.3s;
 }
 
-.standard-section{
+.hero-section, .standard-section{
+    display: flex;
+    justify-content: center;
     width: 100%;
-    height: 100%;
-    background-color: violet;
+    height: 104%;
     position: relative;
-}
-
-.hero-section{
-    background-color: aqua;
-    width: 100%;
-    height: 100%;
-    position: relative;
+    min-height: 500px;
 }
 
 .video-container{
@@ -89,14 +84,17 @@ html, body {
 .nav-logo-img-a{
     height: 70%;
 }
-.hero-text-section{
+.hero-text-section, .text-section{
     width: 100%;
     height: 100%;
     display: flex;
     align-items: flex-end;
     position: relative;
+    justify-content: center;
+    z-index: 1;
 }
-.hero-text-section-bottom-section{
+.hero-text-section-bottom-section, .text-section-bottom-section{
+    min-height: 150px;
     width: 100%;
     height: 40%;
     display: flex;
@@ -112,7 +110,7 @@ html, body {
     align-items: center;
     flex-flow: column;
     text-transform: uppercase;
-    font-size: 36px;
+    font-size: 2.25rem;
     font-weight: bold;
     font-stretch: normal;
     letter-spacing: normal;
@@ -120,15 +118,16 @@ html, body {
 .hero-text-section-minor-span{
     width: fit-content;
     text-transform: capitalize;
-    font-size: 18px;
+    font-size: 1.15rem;
 
 }
 .hero-text-section-discover-a{
     width: fit-content;
+    height: fit-content;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 500;
     transition: 0.5s;
     line-height: 3.5em;
@@ -136,22 +135,23 @@ html, body {
 .hero-text-section-discover-a:hover{
     cursor: pointer;
 }
-.hero-text-section-discover-a:hover .material-symbols-outlined{
+.hero-text-section-discover-a:hover .discover-more-chevron{
     color: #ff0000;
     left: 10px;
 }
-.material-symbols-outlined {
+
+
+.discover-more-chevron {
     left: 2px;
     position: relative;
     transition-property: color, left;
     transition-duration: 0.7s, 0.3s;
     height: fit-content;
     width: fit-content;
-    font-size: 32px !important;
+    font-size: 2rem !important;
     padding-bottom: 1px;
 }
-
-.gradient-top-section{
+.dark-gradient-top-section{
     background: linear-gradient(rgba(0, 0, 0, 0.5) 10%,
                                 rgba(0, 0, 0, 0) 30%);
                                         
@@ -162,9 +162,16 @@ html, body {
                                             rgba(255, 255, 255, 0));
 }
 
-.gradient-bottom-section{
+.dark-gradient-bottom-section{
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0),
                                                  rgba(0, 0, 0, 0.7));
+}
+
+.max-width-wrapper{
+    max-width: 1200px;
+}
+#carousel-section .max-width-wrapper{
+    flex-grow: 1;
 }
 
 .standard-section-cover-image{
@@ -174,8 +181,74 @@ html, body {
     left: 0;
     top: 0;
     overflow: hidden;
+    object-fit: cover;
 }
 .standard-section-text-section-main-span{
     color: #181818;
 }
 
+
+.swiper{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+}
+
+
+.swiper .swiper-button-next, .swiper .swiper-button-prev{
+    color: rgb(255, 255, 255);
+    transition: 0.7s;
+}
+.swiper .swiper-button-next:hover, .swiper .swiper-button-prev:hover{
+    color: #ff0000;
+}
+
+.swiper .swiper-pagination-bullet{
+    background-color: white;
+}
+
+.swiper .swiper-pagination-bullet-active{
+    background-color: #ff0000;
+}
+
+.carousel-wrapper{
+    height: 100%;
+    width: 100%;
+    color: #181818;
+    position: relative;
+}
+
+.carousel-wrapper .swiper-button-next, .carousel-wrapper .swiper-button-prev{
+    color: #181818
+}
+.carousel-wrapper .swiper-pagination-bullet{
+    background-color: #181818
+}
+.carousel-wrapper .swiper-pagination-bullet-active{
+    background-color: #ff0000;
+}
+.carousel-slide-wrapper{
+    padding-left: 128px;
+    padding-right: 128px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.carousel-thumb-wrapper{
+    width: 100%;
+    aspect-ratio: 1.5/1;
+    display: flex;
+
+}
+.carousel-thumb-text{
+    background-color: red;
+    flex-grow: 1;
+}
+.carousel-thumb-img{
+    background-color: blue;
+    flex-grow: 1;
+}

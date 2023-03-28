@@ -1,119 +1,314 @@
 <!doctype html>
 <html lang="pl">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" type="text/css" href="css/reset.css" />
-		<link rel="stylesheet" type="text/css" href="css/style.css" />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-	</head>
-	<body>
-		<div class="flex-container">
-			<section class="hero-section">
-				<div class="video-container">
-					<video class="hero-movie" autoplay muted loop>
-						<source src="static/videos/hero-movie.mp4">
-	
-	
-					</video>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" rel="stylesheet">
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+
+<body>
+	<div class="flex-container">
+		<!-- Hero section -->
+		<section class="hero-section">
+			<div class="video-container">
+				<video class="hero-movie" autoplay muted loop>
+					<source src="static/videos/hero-movie.mp4">
+
+
+				</video>
+			</div>
+
+			<nav class="nav-standard">
+				<div class="nav-menu-section">
+					<a class="nav-button">Auto</a>
+					<a class="nav-button">Racing</a>
+					<a class="nav-button">Chlebking</a>
 				</div>
 
-				<nav class="nav-standard">
-					<section class="nav-menu-section">
-						<a class="nav-button">Auto</a>
-						<a class="nav-button">Racing</a>
-						<a class="nav-button">Chlebking</a>
-					</section>
-	
-					<section class="nav-logo-section">
-						<a class="nav-logo-img-a" href="index.html">
-							<img class="nav-logo-img" src="static/icons/logo-navbar.png">
+				<div class="nav-logo-section">
+					<a class="nav-logo-img-a" href="index.html">
+						<img class="nav-logo-img" src="static/icons/logo-navbar.png">
+					</a>
+				</div>
+
+				<div class="nav-menu-section">
+					<a class="nav-button">Nav3</a>
+					<a class="nav-button">Nav4</a>
+					<a class="nav-button">Newsletter</a>
+				</div>
+			</nav>
+			<div class="hero-text-section">
+				<div class="hero-text-section-bottom-section dark-gradient-bottom-section">
+					<span class="hero-text-section-main-span">
+
+						<span class="hero-text-section-minor-span">
+							Ferrari
+						</span>
+
+						<br>
+						<span>
+							GT3 458, Beauty and Speed
+						</span>
+
+						<br>
+
+						<a class="hero-text-section-discover-a">
+							Discover more
+							<span class="material-symbols-outlined discover-more-chevron">
+								chevron_right
+							</span>
+						</a>
+
+					</span>
+				</div>
+			</div>
+		</section>
+
+
+		<!--
+			Featured section 
+			Fix bottom section and add max width wrapper
+		-->
+		<section class="standard-section">
+			<img class="standard-section-cover-image" src="static/images/ferrari-sf90-spider.png">
+			<!-- Fix gradient applied to whole page instead of 40% of bottom page like in hero section -->
+			<section class="hero-text-section dark-gradient-top-section">
+				<section
+					class="hero-text-section-bottom-section hero-text-section-flex-start-mixin white-gradient-bottom-section">
+					<section class="hero-text-section-main-span standard-section-text-section-main-span">
+						<span>
+							Ferrari SF90 Spider
+						</span>
+						<br>
+						<a class="hero-text-section-discover-a">
+							Discover more
+							<span class="material-symbols-outlined discover-more-chevron">
+								chevron_right
+							</span>
 						</a>
 					</section>
-	
-					<section class="nav-menu-section">
-						<a class="nav-button">Nav3</a>
-						<a class="nav-button">Nav4</a>
-						<a class="nav-button">Newsletter</a>
-					</section>
-				</nav>
-				<section class="hero-text-section">
-					<section class="hero-text-section-bottom-section gradient-bottom-section">
-						<span class="hero-text-section-main-span">
-
-							<span class="hero-text-section-minor-span">
-								Ferrari 
-							</span>
-
-							<br>
-							<span>
-								GT3 458, Beauty and Speed
-							</span>
-
-							<br>
-
-							<a class="hero-text-section-discover-a">
-								Discover more 
-								<span class="material-symbols-outlined">
-									chevron_right
-									</span>
-							</a>
-
-						</span>
-					</section>
 				</section>
+
 			</section>
+		</section>
+
+		<!-- Auto swiper full page section -->
+		<section class="standard-section">
+
+			<div class="swiper" id="auto-swiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+
+						<div class="video-container">
+							<video class="hero-movie" autoplay muted loop>
+								<source src="static/videos/ferrari-purosangue.mp4">
 
 
+							</video>
+						</div>
 
-			<section class="standard-section">
-					<img class="standard-section-cover-image" src="static/images/ferrari-sf90-spider.png">
-					<section class="hero-text-section gradient-top-section">
-							<section class="hero-text-section-bottom-section hero-text-section-flex-start-mixin white-gradient-bottom-section">
-								<section class="hero-text-section-main-span standard-section-text-section-main-span">
-									<span>
-										Ferrari SF90 Spider	
-									</span>	
-									<br>	
-									<a class="hero-text-section-discover-a">
-										Discover more 
-										<span class="material-symbols-outlined">
-											chevron_right
+						<div class="text-section">
+							<div class="text-section-bottom-section dark-gradient-bottom-section">
+								<div class="max-width-wrapper">
+									<span class="hero-text-section-main-span">
+
+										<span class="hero-text-section-minor-span">
+											Ferrari
 										</span>
-									</a>					
-								</section>
-							</section>
 
-					</section>
-			</section>
+										<br>
+										<span>
+											Purosangue, unlike any other
+										</span>
 
-			<section class="standard-section">
+										<br>
 
-			</section>
-			
-			<section class="standard-section">
+										<a class="hero-text-section-discover-a">
+											Discover more
+											<span class="material-symbols-outlined discover-more-chevron">
+												chevron_right
+											</span>
+										</a>
 
-			</section>
+									</span>
 
-			<section class="standard-section">
-
-			</section>
-
-			<section class="standard-section">
-
-			</section>
+								</div>
+							</div>
 
 
 
-			<footer class="standard-footer">
 
-			</footer>
-		</div>
-	</body>
+						</div>
+
+
+					</div>
+
+					<div class="swiper-slide">
+
+						<div class="video-container">
+							<video class="hero-movie" autoplay muted loop>
+								<source src="static/videos/ferrari-f1-bolid.mp4">
+
+
+							</video>
+						</div>
+
+						<div class="text-section">
+							<div class="text-section-bottom-section dark-gradient-bottom-section">
+								<div class="max-width-wrapper">
+									<span class="hero-text-section-main-span">
+
+										<span class="hero-text-section-minor-span">
+											Scuderia Ferrari
+										</span>
+
+										<br>
+										<span>
+											Aiming for the Top
+										</span>
+
+										<br>
+
+										<a class="hero-text-section-discover-a">
+											Discover more
+											<span class="material-symbols-outlined discover-more-chevron">
+												chevron_right
+											</span>
+										</a>
+
+									</span>
+								</div>
+							</div>
+
+
+
+						</div>
+
+					</div>
+
+					<div class="swiper-slide">
+
+						<div class="video-container">
+							<video class="hero-movie" autoplay muted loop>
+								<source src="static/videos/ferrari-amg-cut.mp4">
+
+
+							</video>
+						</div>
+
+						<div class="text-section">
+							<div class="text-section-bottom-section dark-gradient-bottom-section">
+								<div class="max-width-wrapper">
+									<span class="hero-text-section-main-span">
+
+										<span class="hero-text-section-minor-span">
+											Ferrari x AMG
+										</span>
+
+										<br>
+										<span>
+											Unmatched Performance, Unstoppable Force
+										</span>
+
+										<br>
+
+										<a class="hero-text-section-discover-a">
+											Discover more
+											<span class="material-symbols-outlined discover-more-chevron">
+												chevron_right
+											</span>
+										</a>
+
+									</span>
+								</div>
+
+							</div>
+
+
+
+						</div>
+
+					</div>
+				</div>
+				<!-- If we need pagination -->
+				<div class="swiper-pagination"></div>
+
+				<!-- If we need navigation buttons -->
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+
+			</div>
+
+		</section>
+
+		<!-- Auto carousel main page section -->
+		<section class="standard-section" id="carousel-section">
+			<div class="max-width-wrapper">
+				<div class="carousel-wrapper">
+					<!-- Slider main container -->
+					<div class="swiper" id="carousel-swiper">
+						<!-- Additional required wrapper -->
+						<div class="swiper-wrapper">
+							<!-- Slides -->
+							<div class="swiper-slide">
+								<div class="carousel-slide-wrapper">
+									<div class="carousel-thumb-wrapper">
+										<div class="carousel-thumb-text">
+
+										</div>
+										<div class="carousel-thumb-img">
+	
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="carousel-slide-wrapper">
+
+									
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="carousel-slide-wrapper">
+
+									
+								</div>
+							</div>
+						</div>
+						<!-- If we need pagination -->
+						<div class="swiper-pagination"></div>
+
+						<!-- If we need navigation buttons -->
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-button-next"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="standard-section">
+
+		</section>
+
+
+
+		<footer class="standard-footer">
+
+		</footer>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+	<script src="scripts/swiper.js"></script>
+</body>
+
 </html>
