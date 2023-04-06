@@ -20,7 +20,6 @@
 <body>
 	<div class="flex-container">
 		<!-- Hero section -->
-		<section class="hero-section">
 			<div class="video-container">
 				<video class="hero-movie" autoplay muted loop>
 					<source src="static/videos/hero-movie.mp4">
@@ -30,10 +29,13 @@
 			</div>
 
 			<nav class="nav-standard">
+				<div class="nav-burger-wrapper">
+					<span class="material-symbols-outlined"> menu </span>
+				</div>
 				<div class="nav-menu-section">
-					<a class="nav-button">Auto</a>
-					<a class="nav-button">Racing</a>
-					<a class="nav-button">Chlebking</a>
+					<a class="nav-button" href="#hero-section">Newest</a>
+					<a class="nav-button" href="#featured-section">Featured</a>
+					<a class="nav-button" href="#swiper-section">Popular</a>
 				</div>
 
 				<div class="nav-logo-section">
@@ -43,34 +45,29 @@
 				</div>
 
 				<div class="nav-menu-section">
-					<a class="nav-button">Nav3</a>
-					<a class="nav-button">Nav4</a>
-					<a class="nav-button">Newsletter</a>
+					<a class="nav-button" href="#carousel-section">News</a>
+					<a class="nav-button" href="#gallery-section">Gallery</a>
+					<a class="nav-button" href="#footer-section">Newsletter</a>
 				</div>
 			</nav>
 			<div class="hero-text-section">
 				<div class="hero-text-section-bottom-section dark-gradient-bottom-section">
-					<span class="hero-text-section-main-span">
 
-						<span class="hero-text-section-minor-span">
+					<span class="gallery-text-main-span">
+						<span class="gallery-text-pre-title-span">
 							Ferrari
 						</span>
-
-						<br>
-						<span>
+						<span class="gallery-text-title-span">
 							GT3 458, Beauty and Speed
 						</span>
-
-						<br>
-
-						<a class="hero-text-section-discover-a">
-							Discover more
+						<div class="hero-text-section-discover-a">
+							DISCOVER MORE
 							<span class="material-symbols-outlined discover-more-chevron">
 								chevron_right
 							</span>
-						</a>
-
+						</div>
 					</span>
+					
 				</div>
 			</div>
 		</section>
@@ -80,23 +77,26 @@
 			Featured section 
 			Fix bottom section and add max width wrapper
 		-->
-		<section class="standard-section">
+		<section class="standard-section" id="featured-section">
 			<img class="standard-section-cover-image" src="static/images/ferrari-sf90-spider.png">
 			<!-- Fix gradient applied to whole page instead of 40% of bottom page like in hero section -->
 			<section class="hero-text-section dark-gradient-top-section">
 				<section
-					class="hero-text-section-bottom-section hero-text-section-flex-start-mixin white-gradient-bottom-section">
+					class="hero-text-section-bottom-section white-gradient-bottom-section">
 					<section class="hero-text-section-main-span standard-section-text-section-main-span">
-						<span>
-							Ferrari SF90 Spider
-						</span>
-						<br>
-						<a class="hero-text-section-discover-a">
-							Discover more
-							<span class="material-symbols-outlined discover-more-chevron">
-								chevron_right
+
+						<span class="gallery-text-main-span">
+							<span class="gallery-text-title-span">
+								Ferrari SF90 Spider
 							</span>
-						</a>
+							<div class="hero-text-section-discover-a">
+								DISCOVER MORE
+								<span class="material-symbols-outlined discover-more-chevron">
+									chevron_right
+								</span>
+							</div>
+						</span>
+						
 					</section>
 				</section>
 
@@ -104,7 +104,7 @@
 		</section>
 
 		<!-- Auto swiper full page section -->
-		<section class="standard-section">
+		<section class="standard-section" id="swiper-section">
 
 			<div class="swiper" id="auto-swiper">
 				<div class="swiper-wrapper">
@@ -121,34 +121,24 @@
 						<div class="text-section">
 							<div class="text-section-bottom-section dark-gradient-bottom-section">
 								<div class="max-width-wrapper">
-									<span class="hero-text-section-main-span">
 
-										<span class="hero-text-section-minor-span">
+									<span class="gallery-text-main-span">
+										<span class="gallery-text-pre-title-span">
 											Ferrari
 										</span>
-
-										<br>
-										<span>
+										<span class="gallery-text-title-span">
 											Purosangue, unlike any other
 										</span>
-
-										<br>
-
-										<a class="hero-text-section-discover-a">
-											Discover more
+										<div class="hero-text-section-discover-a">
+											DISCOVER MORE
 											<span class="material-symbols-outlined discover-more-chevron">
 												chevron_right
 											</span>
-										</a>
-
+										</div>
 									</span>
 
 								</div>
 							</div>
-
-
-
-
 						</div>
 
 
@@ -167,32 +157,24 @@
 						<div class="text-section">
 							<div class="text-section-bottom-section dark-gradient-bottom-section">
 								<div class="max-width-wrapper">
-									<span class="hero-text-section-main-span">
 
-										<span class="hero-text-section-minor-span">
+									<span class="gallery-text-main-span">
+										<span class="gallery-text-pre-title-span">
 											Scuderia Ferrari
 										</span>
-
-										<br>
-										<span>
+										<span class="gallery-text-title-span">
 											Aiming for the Top
 										</span>
-
-										<br>
-
-										<a class="hero-text-section-discover-a">
-											Discover more
+										<div class="hero-text-section-discover-a">
+											DISCOVER MORE
 											<span class="material-symbols-outlined discover-more-chevron">
 												chevron_right
 											</span>
-										</a>
-
+										</div>
 									</span>
+
 								</div>
 							</div>
-
-
-
 						</div>
 
 					</div>
@@ -210,27 +192,23 @@
 						<div class="text-section">
 							<div class="text-section-bottom-section dark-gradient-bottom-section">
 								<div class="max-width-wrapper">
-									<span class="hero-text-section-main-span">
 
-										<span class="hero-text-section-minor-span">
+									<span class="gallery-text-main-span">
+										<span class="gallery-text-pre-title-span">
 											Ferrari x AMG
 										</span>
-
-										<br>
-										<span>
+										<span class="gallery-text-title-span">
 											Unmatched Performance, Unstoppable Force
 										</span>
-
-										<br>
-
-										<a class="hero-text-section-discover-a">
-											Discover more
+										<div class="hero-text-section-discover-a">
+											DISCOVER MORE
 											<span class="material-symbols-outlined discover-more-chevron">
 												chevron_right
 											</span>
-										</a>
-
+										</div>
 									</span>
+
+
 								</div>
 
 							</div>
@@ -520,6 +498,7 @@
 								</span>
 								<form class="newsletter-form" id="footer-newsletter-form">
 									<div class="newsletter-form-row">
+										<!-- Email input-->
 										<label class="newsletter-email-label">
 											<input type="email" name="newsletter-email" placeholder=" " id="email-input"
 												required>
@@ -529,10 +508,47 @@
 									</div>
 
 									<div class="newsletter-form-row">
+
+										<div class="newsletter-type-wrapper">
+											<span class="newsletter-type-label-span">Choose the newsletters you want to receive</span>
+											<!-- Newsletter type input-->
+											<div class="newsletter-type-checkboxes-wrapper">
+												<label class="newsletter-type-label">
+
+													<input type="checkbox" name="newsletter-type" class="newsletter-checkbox"> GT & Sport Cars
+													<span class="custom-checkbox"></span>
+
+												</label>
+												<label class="newsletter-type-label">
+
+													<input type="checkbox" name="newsletter-type"
+													class="newsletter-checkbox"> Esports
+													<span class="custom-checkbox"></span>
+
+												</label>
+												<label class="newsletter-type-label">
+
+													<input type="checkbox" name="newsletter-type" class="newsletter-checkbox"> Formula 1
+													<span class="custom-checkbox"></span>
+
+												</label>
+												<label class="newsletter-type-label">
+
+													<input type="checkbox" name="newsletter-type" class="newsletter-checkbox"> Corse Clienti & Competizioni GT	
+													<span class="custom-checkbox"></span>
+
+												</label>
+											</div>
+											<p class="newsletter-form-error" id="type-input-error"></p>
+										</div>
+
+									</div>
+
+									<div class="newsletter-form-row">
+										<!-- Privacy policy input-->
 										<label class="privacy-policy-label">
 											I've read and accept the <a>privacy policy</a>
-											<input type="checkbox" name="privacy-policy" id="privacy-policy-checkbox"
-												required>
+											<input type="checkbox" name="privacy-policy" id="privacy-policy-checkbox" class="newsletter-checkbox" required>
 											<span class="custom-checkbox"></span>
 											<p class="newsletter-form-error" id="privacy-policy-checkbox-error"></p>
 										</label>
@@ -677,10 +693,41 @@
 				</div>
 			</div>
 		</footer>
+
+		<nav class="nav-sticky" id="sticky-nav">
+			<div class="nav-burger-wrapper">
+				<span class="material-symbols-outlined nav-burger-menu-button"> menu </span>
+			</div>
+			<div class="nav-menu-section">
+				<a class="nav-button" href="#hero-section">Newest</a>
+				<a class="nav-button" href="#featured-section">Featured</a>
+				<a class="nav-button" href="#swiper-section">Popular</a>
+			</div>
+
+			<div class="nav-logo-section">
+				<a class="nav-logo-img-a" href="index.html">
+					<img class="nav-logo-img" src="static/icons/logo-navbar.png">
+				</a>
+			</div>
+
+			<div class="nav-menu-section">
+				<a class="nav-button" href="#carousel-section">News</a>
+				<a class="nav-button" href="#gallery-section">Gallery</a>
+				<a class="nav-button" href="#footer-section">Newsletter</a>
+			</div>
+		</nav>
+		<div class="side-navigation">
+			<div class="side-navigation-close">
+				<span class="material-symbols-outlined"> close </span>
+
+			</div>
+		</div>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 	<script src="scripts/swiper.js"></script>
 	<script src="scripts/form-validation.js"></script>
+	<script src="scripts/sticky-navbar.js"></script>
+	<script src="scripts/burger-menu.js"></script>
 </body>
 
 </html>

@@ -3,16 +3,16 @@ html, body {
     height: 100%;
     color: white;
     font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth
 }
 
 
 .flex-container{
-    background-color: red;
     width: 100%;
     height: 100%;
 }
 
-.nav-standard{
+.nav-standard, .nav-sticky{
     width: 100%;
     height: 90px;
     display: flex;
@@ -20,7 +20,35 @@ html, body {
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0),
                                               rgba(0, 0, 0, 0.4) 70%,
                                               rgba(0, 0, 0, 0.8));
-    z-index: 1;
+    z-index: 2;
+    transition: 0.2s;
+}
+.side-navigation{
+    position: fixed;
+    top: 0;
+    left: -400px;
+    width: 400px;
+    height: 100%;
+    background-color: red;
+    z-index: 3;
+    transition: 1s;
+    display: flex;
+    flex-flow: column;
+}
+.side-navigation-close{
+    height: 90px;
+    width: 90px;
+    background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-sticky{
+    position: fixed;
+    top: -90px;
+    left: 0;
+    background-image: none;
+    background-color: #181818;
 }
 
 .nav-menu-section{
@@ -30,7 +58,9 @@ html, body {
     justify-content: space-around;
     align-items: center;
 }
-
+.nav-burger-wrapper{
+    display: none;
+}
 .nav-button{
     height: fit-content;
     background-color: transparent;
@@ -41,6 +71,7 @@ html, body {
     font-size: 0.75rem;
     line-height: 1.27em;
     text-transform: uppercase;
+    color: #fff;
 }
 .nav-button:hover{
     cursor: pointer;
@@ -55,6 +86,7 @@ html, body {
     height: 101%;
     position: relative;
     min-height: 500px;
+    overflow: hidden;
 }
 
 .video-container{
@@ -100,9 +132,6 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.hero-text-section-flex-start-mixin{
-    align-items: flex-start;
 }
 .hero-text-section-main-span{
     display: flex;
@@ -155,9 +184,8 @@ html, body {
                                         
 }
 .white-gradient-bottom-section{
-    height: 22%;
-    background-image: linear-gradient(0deg, white 60%,
-                                            rgba(255, 255, 255, 0));
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0),
+                                                 rgba(255, 255, 255, 0.7));
 }
 
 .dark-gradient-bottom-section{
@@ -275,7 +303,7 @@ html, body {
 .carousel-thumb-text-description-span{
     width: 65%;
     padding-top: 24px;
-    padding-bottom: 36px;
+    padding-bottom: 64px;
     line-height: 1.5rem;
     font-size: 1rem;
 }
@@ -362,10 +390,17 @@ html, body {
     line-height: 2.75rem;
     text-transform: uppercase;
     text-align: center;
-    width: 70%;
     padding-top: 16px;
     padding-bottom: 16px;
 }
+#hero-section .gallery-text-title-span, #featured-section .gallery-text-title-span{
+    padding-top: 22px;
+    padding-bottom: 36px;
+}
+#gallery-section .gallery-text-title-span{
+    width: 70%;
+}
+
 .gallery-item-link-wrapper{
     display: block;
     width: 100%;
@@ -419,8 +454,8 @@ html, body {
 .newsletter-form label{
     display: block;
     position: relative;
-    padding-bottom: 20px;
 }
+
 .newsletter-form .newsletter-email-label:focus-within .newsletter-email-label-span{
     transform: translateY(-40%) scale(0.8);
 }
@@ -454,7 +489,7 @@ html, body {
     color: rgb(235, 235, 235);
 }
 .newsletter-form-error{
-    height: 12px;
+    min-height: 12px;
     display: block;
     margin-top: 8px;
     color: #da291c;
@@ -480,7 +515,7 @@ html, body {
     transform: translateY(-40%) scale(0.8);;
 }
 
-.newsletter-form input[name="privacy-policy"]{
+.newsletter-form .newsletter-checkbox{
     position: absolute;
     opacity: 0;
     cursor: pointer;
@@ -497,22 +532,36 @@ html, body {
     border: 1px solid #303030;
     background-color: #ffffff;
 }
-
 .newsletter-form .custom-checkbox::after{
     content: "";
     position: absolute;
     display: none;
-    left: 1.5px;
-    top: 1px;
-    width: 10px;
-    height: 10px;
+    left: 2px;
+    top: 2px;
+    width: 8px;
+    height: 8px;
     background-color: black;
 }
-.newsletter-form input[name="privacy-policy"]:checked ~ .custom-checkbox::after{
+.newsletter-type-checkboxes-wrapper .custom-checkbox{
+    position: relative;
+    width: 18px;
+    height: 18px;
+    border: 2px solid rgba(48, 48, 48, 0.6);
+    left: 0;
+    top: 0;
+    box-sizing: content-box;
+}
+.newsletter-type-checkboxes-wrapper .custom-checkbox::after{
+    width: 12px;
+    height: 12px;
+    left: 3px;
+    top: 3px;
+}
+.newsletter-form .newsletter-checkbox:checked ~ .custom-checkbox::after{
     display: block;
 }
 
-.newsletter-form input[name="privacy-policy"]:hover ~ .custom-checkbox{
+.newsletter-form .newsletter-checkbox:hover ~ .custom-checkbox{
     background-color: rgb(235, 235, 235);;
 }
 
@@ -626,5 +675,53 @@ html, body {
     padding: 16px;
 }
 .standard-footer{
-    height: 80%;
+    min-height: 80%;
+}
+.newsletter-type-wrapper{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+}
+.newsletter-type-label-span{
+    font-size: 1rem;
+    padding-top: 10px;
+    padding-bottom: 16px;
+    font-weight: 500;
+}
+.newsletter-type-checkboxes-wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.newsletter-type-label{
+    width: 50%;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    display: flex !important;
+    flex-flow: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 5px;
+}
+.newsletter-type-checkboxes-wrapper label{
+    padding-bottom: 10px;
+}
+
+@media screen and (max-width: 1280px) {
+    /* Navigation Bar section */
+    .nav-menu-section{
+        display: none;
+    }
+    .nav-burger-wrapper{
+        min-width: 90px;
+        min-height: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .nav-standard, .nav-sticky{
+        justify-content: space-between;
+    }
 }
