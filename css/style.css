@@ -29,7 +29,7 @@ html, body {
     left: -100%;
     width: 400px;
     height: 100%;
-    background-color: red;
+    background-color: #181818;
     z-index: 3;
 }
 .side-navigation-content{
@@ -43,13 +43,11 @@ html, body {
 .side-navigation-close{
     height: 90px;
     width: 90px;
-    background-color: green;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .side-navigation-buttons{
-    background-color: yellow;
     flex-grow: 1;
     display: flex;
     justify-content: flex-start;
@@ -92,7 +90,6 @@ html, body {
     text-transform: uppercase;
     font-size: 1rem;
     color: #fff;
-    background-color: blue;
     text-decoration: none;
 }
 .nav-button:hover{
@@ -339,32 +336,17 @@ html, body {
 .gallery-section-wrapper{
     width: 100%;
     height: fit-content;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: auto;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .gallery-item{
     position: relative;
+    width: 50%;
     aspect-ratio: 1.45/1;
     overflow: hidden;
 }
 
-.gallery-item-col1{
-    grid-column: 1;
-}
-.gallery-item-col2{
-    grid-column: 2;
-}
-.gallery-item-row1{
-    grid-row: 1;
-}
-.gallery-item-row2{
-    grid-row: 2;
-}
-.gallery-item-row3{
-    grid-row: 3;
-}
 .gallery-item-back-img{
     vertical-align: middle;
     height: 100%;
@@ -723,11 +705,21 @@ html, body {
     justify-content: flex-end;
     align-items: center;
     gap: 5px;
-}
-.newsletter-type-checkboxes-wrapper label{
     padding-bottom: 10px;
+    padding-top: 10px;
 }
-
+@media screen and (max-width: 1600px) {
+    .carousel-slide-wrapper{
+        padding-right: 64px;
+        padding-left: 64px;
+    }  
+    #carousel-section .swiper-pagination{
+        padding-bottom: 40px;
+    }
+    .carousel-thumb-text-title-span{
+        font-size: 1.75rem;
+    }
+}
 @media screen and (max-width: 1280px) {
     /* Navigation section */
     .nav-menu-section{
@@ -743,10 +735,113 @@ html, body {
     .nav-standard, .nav-sticky{
         justify-content: space-between;
     }
+
+    /* Gallery section */
+    .gallery-item{
+        height: 460px;
+        aspect-ratio: initial;
+    }
+    /* Footer section */
+    .footer-top{
+        height: 75%;
+        flex-flow: column;
+        padding-bottom: 0px;
+    }
+    .footer-newsletter{
+        width: 100%;
+    }
+    .footer-newsletter{
+        border-bottom: 1px solid #303030;
+        border-right: none;
+    }
+    .footer-links{
+        width: 100%;
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
 }
 @media screen and (max-width: 1000px) {
+    /* Navigation section */
     .side-navigation{
         width: 100%;
         left: -100%;
+    }
+    /* Carousel section */
+    #carousel-section{
+        height: 70%;
+    }
+    #carousel-section .swiper-pagination{
+        padding-bottom: 10px;
+        padding-top: 10px;
+        padding-left: 64px;
+        text-align: left;
+    }
+    #carousel-section .swiper-button-prev,  #carousel-section .swiper-button-next{
+        display: none;
+    }
+    /* Text size section section */
+    .gallery-text-title-span{
+        font-size: 2rem;
+    }
+}
+@media screen and (max-width: 800px) {
+    /* Carousel section */
+    #carousel-section{
+        height: 90%;
+    }
+}
+@media screen and (max-width: 600px) {
+    /* Gallery section */
+    .gallery-section-wrapper{
+        flex-flow: column;
+    }
+    .gallery-item{
+        width: 100%;
+        aspect-ratio: 1.45/1;
+    }
+    .gallery-item-text{
+        padding: 24px;
+    }
+    #gallery-section .gallery-text-title-span{
+        font-size: 1.5rem;
+    }
+    /* Carousel section */
+    #carousel-section{
+        height: 120%;
+    }
+    .carousel-slide-wrapper{
+        padding-left: 24px;
+        padding-right: 24px;
+        align-items: flex-start;
+    }
+    .carousel-thumb-wrapper{
+        padding-top: 48px;
+        gap: 24px;
+        flex-flow: column;
+        flex-direction: column-reverse;
+        aspect-ratio: initial;
+    }
+    .carousel-thumb-img{
+        width: 100%;
+        height: 70%;
+    }
+    .carousel-thumb-text{
+        width: 100%;
+        height: 30%;
+    }
+    .carousel-thumb-text-description-span{
+        padding-bottom: 32px;
+        width: 100%;
+    }
+    .carousel-thumb-text-title-span{
+        font-weight: bold;
+    }
+    #carousel-section .swiper-pagination{
+        padding-left: 24px;
+    }
+
+    /* Footer section */
+    .newsletter-type-label{
+        width: 100%;
     }
 }

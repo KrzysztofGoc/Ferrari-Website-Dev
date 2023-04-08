@@ -26,8 +26,6 @@ for(var i = 0; i < type_inputs.length; i++){
     });
 };
 
-
-
 checkbox.addEventListener('change', function() {
     if(this.checked){
         checkbox_error.innerHTML = "";
@@ -42,7 +40,6 @@ email_input.addEventListener('input', function() {
     if(email_input.value === ''){
         email_input_error.innerHTML = "The field email is required.";
     } 
-    // remove empty error when user inputs anything
     else{
         // display invalid email error
         if(!(email_input.checkValidity())){
@@ -65,4 +62,5 @@ newsletter_form.addEventListener("reset", function() {
     // clear all errors on form reset
     checkbox_error.innerHTML = "";
     email_input_error.innerHTML = "";
+    type_input_error.innerHTML = "";
 });
