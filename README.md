@@ -31,10 +31,6 @@ Alternatively, you can also view the live demo of the Ferrari website frontend o
 
 The Ferrari website frontend can be used as a starting point for learning web development concepts such as HTML, CSS, JavaScript, SwiperJS, and Flexbox. You can use it as a template for building your own website, or modify it to suit your specific needs.
 
-## Contributing
-
-Contributions to this project are welcome! If you have any suggestions or improvements, please feel free to create an issue or submit a pull request.
-
 ## License
 
 This project is open-source and available under the [MIT License](LICENSE). Feel free to use, modify, and distribute the code for personal and commercial purposes. However, attribution is appreciated.
