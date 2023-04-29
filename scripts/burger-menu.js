@@ -3,7 +3,6 @@ const burgerCloseButtons = document.getElementsByClassName("side-navigation-clos
 
 const sideNavigation = document.getElementsByClassName("side-navigation");
 const sideNavigationContent = document.getElementsByClassName("side-navigation-content");
-const sideNavigationComputedStyle = window.getComputedStyle(sideNavigation[0]);
 
 const sideNavigationButtons = document.getElementsByClassName("side-navigation-button");
 

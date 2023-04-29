@@ -1,13 +1,14 @@
 const navbar = document.getElementById("sticky-nav");
+const navbarComputedStyle = window.getComputedStyle(navbar);
 
 var lastScrollTop = 0;
 
 window.addEventListener("scroll", function(){
    var currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
-   if (currentScrollTop > 80) {
+   if (currentScrollTop > 100) {
       if (currentScrollTop > lastScrollTop) {
          // downscroll
-         navbar.style.top = "-90px";
+         navbar.style.top = "-" + navbarComputedStyle.height;
       } else if (currentScrollTop < lastScrollTop) {
        // upscroll
        navbar.style.top = "0px";
@@ -16,7 +17,7 @@ window.addEventListener("scroll", function(){
    }
    else {
       if(navbar.style.top === "0px"){
-         navbar.style.top = "-90px";
+         navbar.style.top = "-" + navbarComputedStyle.height;
       }
    }
 
